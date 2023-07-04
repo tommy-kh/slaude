@@ -1,11 +1,11 @@
 const config = {
-    TOKEN: "xoxc-xxxx",
-    COOKIE: "xoxd-xxxx",
-    TEAM_ID: "workspacename",
-    CHANNEL: "C1234D4567S",
-    CLAUDE_USER: "U1234A568BC",
+    TOKEN: "xoxc-5504233593622-5523524628017-5513331405412-c0adc9d713a2b8b324d01f67869c91cdec6cdb6e71b233b97d2b03b50bacebc8",
+    COOKIE: "xoxd-N6wYBVSZ6FBKu6HxDVHjVt5e7U3vS2hMBBItvjGxpBlJD15RjXnwUSnHeMWcnOjnNM1%2FHr0lx02NblGcxyXp5jeAIyc01AkAI3cTws1WoncfKJZZ7YSnnELgBfFaIdiZI7crhRNQvjOrq4LKULAPYMf%2BCcxUD7a2g3GYhP7IBISraimzciD5%2BAUKqg%3D%3D",
+    TEAM_ID: "w1688123597-c07188556",
+    CHANNEL: "C05EU6VJR54",
+    CLAUDE_USER: "U05F0SFNRFC",
 
-    edit_msg_with_ping: true,
+    edit_msg_with_ping: false,
 
     // if edit_msg_with_ping is false:
     // (i.e.send new message with ping instead of editting the first one)
@@ -13,19 +13,19 @@ const config = {
     // This goes just after your Jailbreak, it goes into its own "Human:" chat reply, instead of appended to the last prompt like JB
     // Can be whatever you want it to be but keep in mind that it might result in unpredictable responses.
     // Anything we put here will eat into our max available tokens so keep it brief. Anything above ~12000 characters will get cut off by Slack.
-    PING_MESSAGE_PREFIX: ".\n\n�A",
-    PING_MESSAGE: "r�",
+    PING_MESSAGE_PREFIX: ".\n\n A",
+    PING_MESSAGE: "r ",
 
     // if edit_msg_with_ping is true:
-    PING_PREFIX: "�A",
-    PING_SUFFIX: "r�\n\n\n",
+    PING_PREFIX: " A",
+    PING_SUFFIX: "r \n\n\n",
     // You can put many tokens in these if you want, in the limit, they'll be pushed out of context
     ping_at_start_of_msg: true, // if false, the ping will be edited in to the end of your prompt+card, so it will be between it and [Start Chat]
     // The "Claude" string is necessary to trigger Claude, but it reminds Claude of who it is
     // You can muddle the string by, for example, adding 'A' to the end of the prefix, and 'r' to the start of the suffix
     // Which makes the text AClauder, which has a different token breakdown than Claude (Cla+ude -> AC+l+auder)
 
-    // The weird � character is less supported, but the thought process was to make the thing seem like a leftover error and for the model to ignore it, "AClauder" doesn't make any sense after all. You can remove it to try it out or if you think anything weird is happening, but felt good to me.
+    // The weird   character is less supported, but the thought process was to make the thing seem like a leftover error and for the model to ignore it, "AClauder" doesn't make any sense after all. You can remove it to try it out or if you think anything weird is happening, but felt good to me.
     // Either way I strongly suggest not using ":" as it confuses it with the usual H: and A:
 
     // Claude specs:
